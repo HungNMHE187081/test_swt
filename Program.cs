@@ -38,6 +38,26 @@ class Program
         {
             // Do nothing
         }
+
+        // Example of a potential issue: Array index out of bounds
+        int[] array = new int[5];
+        Console.WriteLine(array[10]);
+
+        // Example of a potential issue: Division by zero
+        int zero = 0;
+        int divisionResult = 10 / zero;
+
+        // Example of a potential issue: Unreachable code
+        return;
+        Console.WriteLine("This code is unreachable");
+
+        // Example of a potential issue: String comparison without StringComparison
+        string str1 = "test";
+        string str2 = "TEST";
+        if (str1 == str2)
+        {
+            Console.WriteLine("Strings are equal");
+        }
     }
 
     static void MethodWithTooManyParameters(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j)
